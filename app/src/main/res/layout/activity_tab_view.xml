@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TabView">
+
+    <Toolbar
+        android:id="@+id/tab_view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:titleTextColor="@android:color/white"
+        android:title="Message"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_view_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/tab_view_toolbar"
+        app:tabBackground="@color/colorPrimary"
+        app:tabTextColor="@color/tabText"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabIndicatorColor="#55FAF4">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFA6A6"
+            android:text="CONTACT"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#B3FFA6"
+            android:text="STATUS"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_view3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFEA6"
+            android:text="HISTORY"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/tab_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
